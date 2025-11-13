@@ -1,0 +1,49 @@
+{
+  "timeline": [
+    {
+      "date": "1956",
+      "event": "Dartmouth Conference",
+      "description": "The term 'artificial intelligence' is coined at the Dartmouth Conference, marking the birth of AI as a field."
+    },
+    {
+      "date": "1966",
+      "event": "ELIZA",
+      "description": "Joseph Weizenbaum develops ELIZA, an early natural language processing program that simulates conversation."
+    },
+    {
+      "date": "1972",
+      "event": "SHRDLU",
+      "description": "SHRDLU, a natural language understanding program, is developed by Terry Winograd, demonstrating the ability to understand and manipulate objects in a virtual world."
+    },
+    {
+      "date": "1980",
+      "event": "Expert Systems",
+      "description": "The rise of expert systems, which use AI to mimic the decision-making abilities of a human expert, begins."
+    },
+    {
+      "date": "1997",
+      "event": "Deep Blue",
+      "description": "IBM's Deep Blue defeats world chess champion Garry Kasparov, showcasing the power of AI in strategic games."
+    },
+    {
+      "date": "2011",
+      "event": "IBM Watson",
+      "description": "IBM Watson wins the quiz show Jeopardy!, demonstrating advanced natural language processing and machine learning capabilities."
+    },
+    {
+      "date": "2016",
+      "event": "AlphaGo",
+      "description": "Google DeepMind's AlphaGo defeats Go champion Lee Sedol, marking a significant milestone in AI's ability to handle complex games."
+    },
+    {
+      "date": "2020",
+      "event": "GPT-3",
+      "description": "OpenAI releases GPT-3, a state-of-the-art language processing AI that can generate human-like text."
+    },
+    {
+      "date": "2023",
+      "event": "AI in Everyday Life",
+      "description": "AI technologies become integrated into everyday applications, impacting various sectors including healthcare, finance, and transportation."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+@media print {
+    body {
+        font-family: Arial, sans-serif;
+        color: black;
+        background: white;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    a:after {
+        content: " (" attr(href) ")";
+    }
+
+    .no-print {
+        display: none;
+    }
+
+    /* Ensure images are printed at their original size */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Adjust layout for print */
+    .container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Hide elements that should not be printed */
+    .print-only {
+        display: block;
+    }
+
+    /* Additional print styles can be added here */
+}
