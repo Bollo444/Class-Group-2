@@ -2,13 +2,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Videogame-Ai</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>The Rise of AI in Gaming - Revolutionizing Interactive Entertainment</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=JetBrains+Mono:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+     <link rel="stylesheet" href="Video-game.css">
+    <script src="Video-game-ai.js" defer></script>
+
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'space-blue': '#0B1426',
+                    'electric-cyan': '#00D4FF',
+                    'neon-green': '#39FF14', 
+                    'warm-gray': '#F8F9FA',
+                    'charcoal': '#2C3E50'
+                }
+                ,
+                fontFamily: {
+                    'display': ['Inter', 'sans-serif'],
+                    'body': ['Source Sans Pro', 'sans-serif'],
+                    'mono': ['JetBrains Mono', 'monospace'],
+                }
+            }
+        }
+    }
+</script>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=JetBrains+Mono:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap');
+
+    body{
+        font-family: 'Source Sans Pro', sans-serif;
+        background: linear-gradient(135deg, #0B1426 0%, #1a2332 100%);
+        color: #8FF9FA;
+        overflow-x: hidden
+    }
+
+    .hero-bg{
+        background-image: url('path-to-hero-image.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .background-canvas{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    .animate-on-scroll{
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+    }
+
+    .animate-in{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .gradient-text {
+        background: linear-gradient(90deg, #00D4FF, #39FF14);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .glow-effect{
+        box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+    }
+
+    .feature-card{
+        background: rgba(248, 249, 250, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(0, 212, 255, 0.1);
+        transition: all o.3s ease;
+    }
+    .timeline-container{
+        background: rgba(11, 20, 38, 0.8);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(0, 212, 255, 0.2);
+    }
+
+    .milestone-year {
+        font-size: 3rem;
+        font-weight: 800;
+        color: #00D4FF;
+        text-shadow: 0 0 10px rgba(0, 212, 255, 0.5)
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #39FF14;
+    }
+
+    .typing-cursor{
+        animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+        0%, 50% { opacity: 1; }
+        51%, 100% { opacity: 0; }
+    }
+
+    .particle{
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: #00D4FF;;
+        animation: float 6s ease-in-out infinite;
+        border-radius: 50%
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(180deg); }
+    }
+
+    .pulse-grow{
+        animation: pulse-grow 2s ease-in-out infinite alternate
+    }
+
+    @keyframes pulse-grow {
+        from { box-shadow: 0 0 20px rgba(0, 212, 255, 0.3); }
+        to { box-shadow: 0 0 30px rgba(0, 212, 255, 0.6); }
+    }
+
+</style>
+
 </head>
 <body>
-     <section class="intro">
-      <h2>The Rise of AI in Gaming</h2>
+
+    <!-- Background Canvas -->
+    <canvas id="background-canvas" class="background-canvas"></canvas>
+
+     <section>
+      <h1>The Rise of AI in Gaming</h1>
         <p>Artificial Intelligence (AI) has revolutionized the gaming industry, transforming how games are developed and played. From enhancing non-player character (NPC) behavior to generating dynamic game environments, AI technologies have significantly improved the gaming experience. This section explores the various ways AI is integrated into video games and its impact on gameplay and player engagement.</p>
+    </section>
+
+    <!-- Hero Section -->
+    <section>
+        <!-- Floating Particles -->
+        <div class="particle" style="left: 10%; top: 20%; animation-delay: 0s;"></div>
+        <div class="particle" style="left: 80%; top: 30%; animation-delay: 2s;"></div>
+        <div class="particle" style="left: 60%; top: 70%; animation-delay: 4s;"></div>
+        <div class="particle" style="left: 20%; top: 80%; animation-delay: 1s;"></div>
     </section>
 
     <h1>Videogame-Ai</h1>
