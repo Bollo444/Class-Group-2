@@ -1,0 +1,195 @@
+/*
+ * Video-game.css
+ * Styling for the "The world of AI in Video Games" timeline page.
+ * Theme: Futuristic, Neon, Timeline structure.
+ */
+
+/* ------------------------------------------------------------------ */
+/* 1. Base Setup and Variables */
+/* ------------------------------------------------------------------ */
+
+/* Define Color Variables */
+:root {
+    --space-blue: #0B1426;
+    --electric-cyan: #00D4FF;
+    --neon-green: #39FF14;
+    --cyber-pink: #FF39FF;
+    --dark-void: #040914;
+    --warm-gray: #F8F9FA;
+}
+
+body {
+    /* Deep background gradient from previous exercise */
+    background: linear-gradient(135deg, var(--space-blue) 0%, var(--dark-void) 100%);
+    color: var(--warm-gray);
+    font-family: 'Tinos', serif; /* Readable font for body text */
+    margin: 0;
+    padding: 0 1rem 4rem 1rem; /* Padding for mobile view */
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: 'Major Mono Display', monospace; /* Strong, futuristic heading */
+    font-size: 3.5rem;
+    text-align: center;
+    padding: 4rem 0 2rem 0;
+    margin: 0 auto;
+    max-width: 900px;
+    letter-spacing: 0.1em;
+    /* Use the primary Cyan-Green gradient */
+    background: linear-gradient(90deg, var(--electric-cyan), var(--neon-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 15px rgba(0, 212, 255, 0.5); /* Subtle glow */
+}
+
+h2 {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 2.2rem;
+    color: var(--cyber-pink); /* Use Cyber Pink for main decade headers */
+    padding-top: 1rem;
+    margin-top: 0;
+    border-bottom: 2px solid var(--cyber-pink);
+    padding-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(255, 57, 255, 0.4);
+    letter-spacing: 0.05em;
+}
+
+p {
+    max-width: 900px;
+    margin: 1rem auto;
+    font-size: 1.1rem;
+}
+
+a {
+    color: var(--neon-green);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--neon-green);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--electric-cyan);
+    border-bottom-color: var(--electric-cyan);
+}
+
+/* ------------------------------------------------------------------ */
+/* 2. Timeline and Content Containers */
+/* ------------------------------------------------------------------ */
+
+/* Container for the main introductory paragraph */
+body > p:first-of-type {
+    text-align: center;
+    font-style: italic;
+    color: var(--warm-gray);
+    margin-bottom: 3rem;
+}
+
+/* Timeline navigation list (1970s, 1980s, etc.) */
+ul {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    background-color: var(--space-blue);
+    border: 1px solid var(--electric-cyan);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+}
+
+li {
+    flex-grow: 1;
+    text-align: center;
+    padding: 0.75rem 0.5rem;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 0.9rem;
+    color: var(--electric-cyan);
+    border-right: 1px solid var(--electric-cyan);
+    cursor: default;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li:hover {
+    background-color: rgba(0, 212, 255, 0.1);
+    color: var(--warm-gray);
+}
+
+/* Individual Decade Section */
+div {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background: rgba(11, 20, 38, 0.85); /* Slightly transparent Space Blue */
+    border: 2px solid var(--electric-cyan);
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+    transition: box-shadow 0.5s ease;
+}
+
+div:hover {
+    box-shadow: 0 0 40px rgba(255, 57, 255, 0.3); /* Pink glow on hover */
+}
+
+/* ------------------------------------------------------------------ */
+/* 3. Media and Images */
+/* ------------------------------------------------------------------ */
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem auto;
+    border: 3px solid var(--neon-green); /* Frame the images with neon green */
+    border-radius: 6px;
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.5);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.01);
+}
+
+/* ------------------------------------------------------------------ */
+/* 4. Responsive Adjustments */
+/* ------------------------------------------------------------------ */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+        padding: 2rem 0 1rem 0;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Stack timeline items on smaller screens */
+    ul {
+        flex-direction: column;
+        border: none;
+        background: none;
+        box-shadow: none;
+    }
+
+    li {
+        border-right: none;
+        border-bottom: 1px solid var(--electric-cyan);
+        margin-bottom: 5px;
+        background-color: var(--space-blue);
+        border-radius: 4px;
+    }
+    
+    div {
+        margin: 2rem 0.5rem;
+        padding: 1.5rem;
+    }
+}
